@@ -1,4 +1,4 @@
-package eg.edu.alexu.csd.datastructure.hangman.cs23;
+package eg.edu.alexu.csd.datastructure.hangman.cs;
 
 import static org.junit.Assert.*;
 
