@@ -148,7 +148,9 @@ public class ExpressionEvaluator implements IExpressionEvaluator{
 				}
 				workPlace.push(String.valueOf(expression.substring(from, i)));
 			}else if(expression.charAt(i) != ' ' && infixExpression.charAt(i) != '\t'){
+				if(workPlace.isEmpty()) throw new RuntimeException("Invalid input!");
 				secondOperand = Float.parseFloat((String) workPlace.pop());
+				if(workPlace.isEmpty()) throw new RuntimeException("Invalid input!");
 				firstOperand = Float.parseFloat((String) workPlace.pop());
 				switch(expression.charAt(i)) {
 				case '+':
